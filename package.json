@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html index.html",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint . --ignore-path .gitignore"
   },
