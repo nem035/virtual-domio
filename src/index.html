@@ -1,6 +1,48 @@
 <html>
   <head>
-    <title>Hello World</title>
+    <title>Virtual DOMio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #6f1e51;
+        color: #fff;
+      }
+      @media screen and (min-width: 768px) {
+        body {
+          padding: 5vh 20vw;
+        }
+      }
+      h1 {
+        font-family: 'Shadows Into Light Two', cursive;
+        font-size: 50px;
+      }
+      #app {
+        align-content: center;
+        border: 5px solid #fff;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+      }
+      #count,
+      input {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #count {
+        font-size: 75px;
+      }
+      input {
+        padding: 10px;
+        outline: 0;
+        border: 5px solid #ed4c67;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
