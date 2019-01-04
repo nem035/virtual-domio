@@ -1,4 +1,4 @@
-export default function createElement(tagName, { attrs, children }) {
+export default function createElement(tagName, attrs = {}, children = []) {
   return {
     tagName,
     attrs,

@@ -1,11 +1,12 @@
 import { createElement, render } from './vdom';
 
-const vApp = createElement('div', {
-  attrs: {
+const vApp = createElement(
+  'div',
+  {
     id: 'app',
   },
-  children: ['Hello World'],
-});
+  ['Hello World']
+);
 
 const $app = render(vApp);
 
