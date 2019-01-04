@@ -1,4 +1,5 @@
 import { createElement, render } from './vdom';
+import mount from './vdom/mount';
 
 const vApp = createElement(
   'div',
@@ -15,4 +16,4 @@ const vApp = createElement(
 
 const $app = render(vApp);
 
-console.log($app);
+mount($app, document.querySelector('#app'));
