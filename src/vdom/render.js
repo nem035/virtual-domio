@@ -1,4 +1,10 @@
-export default function render({ tagName, attrs, children }) {
+export default function render(vNode) {
+  if (typeof vNode === 'string') {
+    return document.createTextNode(vNode);
+  }
+
+  const { tagName, attrs, children } = vNode;
+
   const $el = document.createElement(tagName);
 
   for (const [key, value] of Object.entries(attrs)) {

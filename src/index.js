@@ -9,4 +9,4 @@ const vApp = createElement('div', {
 
 const $app = render(vApp);
 
-console.log(vApp);
+console.log($app);
