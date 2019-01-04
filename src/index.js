@@ -1,4 +1,4 @@
-import createElement from './vdom/createElement';
+import {createElement, render} from './vdom';
 
 const vApp = createElement('div', {
   attrs: {
@@ -8,5 +8,7 @@ const vApp = createElement('div', {
     'Hello World'
   ]
 })
+
+const $app = render(vApp)
 
 console.log(vApp)
