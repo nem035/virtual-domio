@@ -1,5 +1,4 @@
-import { createElement, render } from './vdom';
-import mount from './vdom/mount';
+import { createElement, render, mount, diff } from './vdom';
 
 const createApp = ({ count }) =>
   createElement(
@@ -10,6 +9,7 @@ const createApp = ({ count }) =>
     },
     [
       String(count),
+      createElement('input', { type: 'text' }),
       createElement('img', {
         src: 'https://media.giphy.com/media/l1IYk3l6xcEDN5RFS/giphy.gif',
       }),
@@ -20,11 +20,13 @@ const state = {
   count: 0,
 };
 
-let $root = document.querySelector('#app');
-$root = mount(render(createApp(state)), $root);
+let vApp = createApp(state);
+let $root = mount(render(vApp), document.querySelector('#app'));
 
 setInterval(() => {
-  console.log(`rendering count ${state.count}`);
-  $root = mount(render(createApp(state)), $root);
+  const newVApp = createApp(state);
+  const patch = diff(vApp, newVApp);
+  $root = patch($root);
+  vApp = newVApp;
   state.count += 1;
 }, 1000);
