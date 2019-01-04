@@ -45,7 +45,11 @@ export default function diff(oldVNode, newVNode) {
 
 function diffAttrs(oldAttrs, newAttrs) {
   const setAttrsPatches = Object.keys(newAttrs)
-    .filter(attrName => !oldAttrs.hasOwnProperty(attrName))
+    .filter(
+      attrName =>
+        !oldAttrs.hasOwnProperty(attrName) ||
+        oldAttrs[attrName] !== newAttrs[attrName]
+    )
     .map(
       attrName =>
         function setAttr($node) {
