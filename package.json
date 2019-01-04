@@ -31,5 +31,9 @@
     "lint-staged": "^8.1.0",
     "parcel-bundler": "^1.11.0",
     "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "lodash.spread": "^4.2.1",
+    "lodash.zip": "^4.2.0"
   }
 }

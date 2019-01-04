@@ -1,4 +1,7 @@
 extends:
+  - eslint:recommended
   - '@nem035/eslint-config'
+env:
+  browser: true
 parserOptions:
   sourceType: 'module'
