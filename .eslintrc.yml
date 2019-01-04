@@ -1,0 +1,4 @@
+extends:
+  - '@nem035/eslint-config'
+parserOptions:
+  sourceType: 'module'

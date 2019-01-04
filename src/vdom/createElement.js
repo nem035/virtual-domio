@@ -1,5 +1,7 @@
-export default (tagName, { attrs, children }) => ({
-  tagName,
-  attrs,
-  children
-})
+export default function createElement(tagName, { attrs, children }) {
+  return {
+    tagName,
+    attrs,
+    children,
+  };
+}
